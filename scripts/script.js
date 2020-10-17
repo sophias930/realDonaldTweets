@@ -59,11 +59,30 @@ function playOneRound() {
 
         // user chooses one! and earns a point or not
         $(donaldTweetId).click(function () {
-            resolve(1);
+            $(donaldTweetId).addClass('correctAnswer');
+            setTimeout(function () {
+                $(donaldTweetId).removeClass('correctAnswer');
+                
+                $(botTweetId).off();
+                $(donaldTweetId).off();
+                
+                resolve(1);
+            }, 2000);
         }) 
 
         $(botTweetId).click(function () {
-            resolve(0);
+            $(botTweetId).addClass('incorrectAnswer');
+            $(donaldTweetId).addClass('correctAnswer');
+
+            setTimeout(function () {
+                $(botTweetId).removeClass('incorrectAnswer');
+                $(donaldTweetId).removeClass('correctAnswer'); 
+
+                $(botTweetId).off();
+                $(donaldTweetId).off();
+
+                resolve(0);
+            }, 2000);
         }) 
 
     });
