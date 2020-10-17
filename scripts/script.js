@@ -1,6 +1,6 @@
 let points = 0;
 let rounds = 0;
-let tweets = ["#leftTweet", "#rightTweet"]; // will randomly choose one for donald vs. bot
+let tweets = ["#leftp", "#rightp"]; // will randomly choose one for donald vs. bot
 
 $(document).ready(() => {
 
@@ -45,17 +45,22 @@ function playOneRound() {
         // fill one random div w donald
         let donaldTweetIndex = getRandomInt(2);
         console.log(donaldTweetIndex);
-        let donaldTweetId = tweets[donaldTweetIndex];
+        let donaldTweetIdPar = tweets[donaldTweetIndex];
+        let donaldTweetId = "";
 
-        $(donaldTweetId).html("<p>" + getDonaldTweet() + "</p>");
+        $(donaldTweetIdPar).html(getDonaldTweet());
 
         // fill other div w bot
+        let botTweetIdPar = "#leftp";
         let botTweetId = "#leftTweet";
-        if (donaldTweetId == "#leftTweet") {
+        donaldTweetId = "#rightTweet";
+        if (donaldTweetIdPar == "#leftp") {
+            botTweetIdPar = "#rightp";
             botTweetId = "#rightTweet";
+            donaldTweetId = "#leftTweet";
         } 
 
-        $(botTweetId).html("<p>" + getBotTweet() + "</p>");  
+        $(botTweetIdPar).html(getBotTweet());  
 
         // user chooses one! and earns a point or not
         $(donaldTweetId).click(function () {

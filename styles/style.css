@@ -3,6 +3,7 @@ body {
     background-color: #E1E8ED;
     color: #14171A;
     font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+    text-align: center;
 }
 
 h1, h2, h3 {
@@ -10,7 +11,7 @@ h1, h2, h3 {
 }
 
 #header {
-    background-color:  #018fe7;
+    background-color: #1DA1F2;
     color: #F5F8FA;
 }
 
@@ -20,6 +21,10 @@ h1, h2, h3 {
 
 #game {
     text-align: center;
+}
+
+#game img {
+    width: 20%;
 }
 
 button {
@@ -57,6 +62,7 @@ button {
   }
   
   .twitter-tweet p {
+    text-align: left;
     font-size: 16px;
     font-weight: normal;
     line-height: 20px;
