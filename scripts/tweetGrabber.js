@@ -2,8 +2,10 @@
 
 function getDonaldTweet() {
     // TODO 
+    return "I am trump";
 }
 
-function getFakeTweet() {
+function getBotTweet() {
     // TODO 
+    return "I am bot";
 }

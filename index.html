@@ -8,14 +8,18 @@
     <!-- styles -->
     <link rel='stylesheet' href='styles/style.css' />
 
+    <!-- jquery -->
+    <script src="jquery/jquery-3.5.1.min.js"></script>
+
     <!-- scripts -->
     <script src="scripts/script.js"></script>
     <script src="scripts/tweetGrabber.js"></script>
+    <script src="scripts/utils.js"></script>
 
 
-    <!-- jquery -->
-    <script src='https://code.jquery.com/jquery-3.3.1.js'
-    integrity='sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=' crossorigin='anonymous'></script>
+
+
+
 
 </head>
 
@@ -30,8 +34,12 @@
 <div id="game">
     <button id="begin">Begin!</button>
 
-    <div id="leftTweet" hidden=true>started</div>
-    <div id="rightTweet"></div>
+    <div id="leftTweet" hidden=true></div>
+    <div id="rightTweet" hidden=true></div>
+
+    <br>
+
+    <div id="score" hidden=true>Score: 0</div>
 </div>
 
 </body>
