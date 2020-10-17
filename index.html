@@ -4,10 +4,34 @@
 <head>
     <title>realDonaldTweets</title>
     <link rel="icon" href="images/icon.png">
-    <link rel='stylesheet' href='style.css' />
-    <script src="script.js"></script>
+
+    <!-- styles -->
+    <link rel='stylesheet' href='styles/style.css' />
+
+    <!-- scripts -->
+    <script src="scripts/script.js"></script>
+    <script src="scripts/tweetGrabber.js"></script>
+
+
+    <!-- jquery -->
+    <script src='https://code.jquery.com/jquery-3.3.1.js'
+    integrity='sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=' crossorigin='anonymous'></script>
 
 </head>
 
 <body>
+
+<div id="header">
+    <h1>realDonaldTweets</h1>
+    <h2>Can you differentiate Donald Trump's tweets from a bot?</h2>
+</div>
+
+<!-- Ten tweets side by side; tallies up points -->
+<div id="game">
+    <button id="begin">Begin!</button>
+
+    <div id="leftTweet" hidden=true>started</div>
+    <div id="rightTweet"></div>
+</div>
+
 </body>
