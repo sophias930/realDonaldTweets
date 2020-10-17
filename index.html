@@ -16,26 +16,24 @@
     <script src="scripts/tweetGrabber.js"></script>
     <script src="scripts/utils.js"></script>
 
-
-
-
-
-
 </head>
 
 <body>
 
 <div id="header">
-    <h1>realDonaldTweets</h1>
+    <h1>@realDonaldTweets <span><img src="images/verified.png"></span></h1>
     <h2>Can you differentiate Donald Trump's tweets from a bot?</h2>
+    <br>
 </div>
-
+<br>
 <!-- Ten tweets side by side; tallies up points -->
 <div id="game">
+    <h3 id="instructions" hidden=true>Click the tweet you think is real!</h3>
+
     <button id="begin">Begin!</button>
 
-    <div id="leftTweet" hidden=true></div>
-    <div id="rightTweet" hidden=true></div>
+    <div id="leftTweet" class="twitter-tweet" hidden=true></div>
+    <div id="rightTweet" class="twitter-tweet" hidden=true></div>
 
     <br>
 

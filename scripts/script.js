@@ -11,26 +11,31 @@ $(document).ready(() => {
 });
 
 async function beginGame() {
-    // TODO
-        // fill leftTweet and rightTweet with getRandomTweet() and getDonaldTweet()
+    // fill leftTweet and rightTweet with getRandomTweet() and getDonaldTweet()
     $('#begin').hide();
-    $('#leftTweet').show();
-    $('#rightTweet').show();
+    $('#instructions').show();
+
+    $('.twitter-tweet').show();
+    $('.twitter-tweet').css("display", "inline-block");
+
     $('#score').show();
 
     // 10 rounds
     while (rounds < 10) { 
         points += await playOneRound();
         $('#score').text("Score: " + points);
-        
+
         rounds++;
     }
 
     // final points!
-    $('#leftTweet').hide();
-    $('#rightTweet').hide();
+    $('.twitter-tweet').hide();
+    $('#instructions').hide();
 
     // TODO change css of score to enlarggeeeennnn at the end!
+    $('#score').addClass("twitter-tweet");
+    $('#score').css("display", "inline-block");
+    $('#score').html("<p> Your final score is " + points + "!</p>");
     
 }
 
@@ -42,7 +47,7 @@ function playOneRound() {
         console.log(donaldTweetIndex);
         let donaldTweetId = tweets[donaldTweetIndex];
 
-        $(donaldTweetId).text(getDonaldTweet());
+        $(donaldTweetId).html("<p>" + getDonaldTweet() + "</p>");
 
         // fill other div w bot
         let botTweetId = "#leftTweet";
@@ -50,7 +55,7 @@ function playOneRound() {
             botTweetId = "#rightTweet";
         } 
 
-        $(botTweetId).text(getBotTweet());  
+        $(botTweetId).html("<p>" + getBotTweet() + "</p>");  
 
         // user chooses one! and earns a point or not
         $(donaldTweetId).click(function () {

@@ -1,1 +1,76 @@
 /* TODO make this yams look better lol */
+body {
+    background-color: #E1E8ED;
+    color: #14171A;
+    font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+#header {
+    background-color:  #018fe7;
+    color: #F5F8FA;
+}
+
+#header img{
+    width: 3%;
+}
+
+#game {
+    text-align: center;
+}
+
+button {
+	display: inline-block;
+    margin: 0;
+    padding: 0.75rem 1rem;
+	border: 0;
+	border-radius: 0.317rem;
+	background-color: #aaa;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 1rem;
+    line-height: 1.5;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+.twitter-tweet {
+    text-align: left;
+    background-color: #F5F8FA; 
+    font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+    border-color: #eee #ddd #bbb;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    margin: 10px 5px;
+    padding: 0 50px 50px 50px;
+    max-width: 468px;
+  }
+  
+  .twitter-tweet p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+    color: black;
+  }
+  
+  .twitter-tweet a {
+    color: inherit;
+    font-weight: normal;
+    text-decoration: none;
+    outline: 0 none;
+  }
+  
+  .twitter-tweet a:hover,
+  .twitter-tweet a:focus {
+    text-decoration: underline;
+  }
