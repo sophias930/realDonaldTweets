@@ -2,7 +2,6 @@
 
 function getDonaldTweet() {
     // TODO 
-
     return RealTweetsFormatted[Math.floor(Math.random() * RealTweetsFormatted.length)];
 }
 

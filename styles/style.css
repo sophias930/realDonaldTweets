@@ -50,6 +50,7 @@ button {
 }
 
 .twitter-tweet {
+    flex: 1;
     text-align: left;
     background-color: #F5F8FA; 
     font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
@@ -62,8 +63,9 @@ button {
     border-width: 1px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
     margin: 10px 5px;
-    padding: 0 50px 50px 50px;
+    padding: 0px 50px 5px 50px;
     max-width: 468px;
+    height: 100%;
   }
   
   .twitter-tweet p {
@@ -74,18 +76,6 @@ button {
     color: black;
   }
   
-  .twitter-tweet a {
-    color: inherit;
-    font-weight: normal;
-    text-decoration: none;
-    outline: 0 none;
-  }
-  
-  .twitter-tweet a:hover,
-  .twitter-tweet a:focus {
-    text-decoration: underline;
-  }
-
   .correctAnswer {
     background-image: url('../assets/answerIcons/correct.png');
     background-repeat: no-repeat;
@@ -103,6 +93,10 @@ button {
     animation: incorrect 0.82s cubic-bezier(.36, .07, .19, .97) both;
 }
 
+#tweets {
+    display: flex;
+    justify-content: center;
+}
 
 @keyframes incorrect {
 
