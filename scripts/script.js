@@ -2,11 +2,15 @@ let points = 0;
 let rounds = 0;
 let tweets = ["#leftp", "#rightp"]; // will randomly choose one for donald vs. bot
 
+let FakeTweetsFormatted = [];
+let RealTweetsFormatted = [];
 $(document).ready(() => {
+    FakeTweetsFormatted = fakeTweets.split('\n');
+    RealTweetsFormatted = realTweets.split('\n');
 
     $('#begin').click(function () {
         beginGame();
-    }) 
+    })
 
 });
 
@@ -21,7 +25,7 @@ async function beginGame() {
     $('#score').show();
 
     // 10 rounds
-    while (rounds < 10) { 
+    while (rounds < 10) {
         points += await playOneRound();
         $('#score').text("Score: " + points);
 
@@ -36,7 +40,7 @@ async function beginGame() {
     $('#score').addClass("twitter-tweet");
     $('#score').css("display", "inline-block");
     $('#score').html("<p> Your final score is " + points + "!</p>");
-    
+
 }
 
 function playOneRound() {
@@ -58,22 +62,22 @@ function playOneRound() {
             botTweetIdPar = "#rightp";
             botTweetId = "#rightTweet";
             donaldTweetId = "#leftTweet";
-        } 
+        }
 
-        $(botTweetIdPar).html(getBotTweet());  
+        $(botTweetIdPar).html(getBotTweet());
 
         // user chooses one! and earns a point or not
         $(donaldTweetId).click(function () {
             $(donaldTweetId).addClass('correctAnswer');
             setTimeout(function () {
                 $(donaldTweetId).removeClass('correctAnswer');
-                
+
                 $(botTweetId).off();
                 $(donaldTweetId).off();
-                
+
                 resolve(1);
             }, 2000);
-        }) 
+        })
 
         $(botTweetId).click(function () {
             $(botTweetId).addClass('incorrectAnswer');
@@ -81,14 +85,14 @@ function playOneRound() {
 
             setTimeout(function () {
                 $(botTweetId).removeClass('incorrectAnswer');
-                $(donaldTweetId).removeClass('correctAnswer'); 
+                $(donaldTweetId).removeClass('correctAnswer');
 
                 $(botTweetId).off();
                 $(donaldTweetId).off();
 
                 resolve(0);
             }, 2000);
-        }) 
+        })
 
     });
 }

@@ -2,10 +2,11 @@
 
 function getDonaldTweet() {
     // TODO 
-    return "I am trump";
+
+    return RealTweetsFormatted[Math.floor(Math.random() * RealTweetsFormatted.length)];
 }
 
 function getBotTweet() {
     // TODO 
-    return "I am bot";
+    return FakeTweetsFormatted[Math.floor(Math.random() * FakeTweetsFormatted.length)];
 }
