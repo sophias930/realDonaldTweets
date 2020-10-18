@@ -1,5 +1,5 @@
 let points = 0;
-let rounds = 0;
+let rounds = 1;
 let tweets = ["#leftp", "#rightp"]; // will randomly choose one for donald vs. bot
 
 let FakeTweetsFormatted = [];
@@ -25,21 +25,20 @@ async function beginGame() {
     $('#score').show();
 
     // 10 rounds
-    while (rounds < 10) {
+    while (rounds < 11) {
         points += await playOneRound();
-        $('#score').text("Score: " + points);
-
+        $('#score').html("<b>Score: " + points+"</b>");
         rounds++;
+        $('#instructions').text("Click the tweet you think is real! (" + rounds + "/10)");
     }
 
     // final points!
     $('.twitter-tweet').hide();
     $('#instructions').hide();
 
-    // TODO change css of score to enlarggeeeennnn at the end!
     $('#score').addClass("twitter-tweet");
     $('#score').css("display", "inline-block");
-    $('#score').html("<p> Your final score is " + points + "!</p>");
+    $('#score').html("Your final score is " + points + "/10!");
 
 }
 
