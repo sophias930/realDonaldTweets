@@ -17,6 +17,7 @@ $(document).ready(() => {
 async function beginGame() {
     // fill leftTweet and rightTweet with getRandomTweet() and getDonaldTweet()
     $('#begin').hide();
+    $('#description').hide();
     $('#instructions').show();
 
     $('.twitter-tweet').show();
