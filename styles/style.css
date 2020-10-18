@@ -24,8 +24,9 @@ h1, h2, h3 {
 }
 
 #game img {
-    width: 3%;
+    width: 100%;
 }
+
 
 button {
 	display: inline-block;
