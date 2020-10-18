@@ -10,6 +10,10 @@ h1, h2, h3 {
     text-align: center;
 }
 
+h3 {
+    font-size: 18pt;
+}
+
 #header {
     background-color: #1DA1F2;
     color: #F5F8FA;
@@ -29,6 +33,10 @@ h1, h2, h3 {
 
 #game #trump {
     width: 10%;
+}
+
+#score {
+    font-size: 16pt;
 }
 
 
